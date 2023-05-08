@@ -11,7 +11,7 @@
 
 
 #define INIT_DISPLAY				0xe0
-#define FIRSR_CHAR_POSITION			0x20
+#define FIRST_CHAR_POSITION			0x20
 #define BRIGHTNESS_CMD				0xe4
 #define UPDATE_SCREEN				0xe8
 

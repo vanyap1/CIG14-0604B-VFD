@@ -42,7 +42,7 @@ void vfd_set_brightness(uint8_t brightness){
 	set_pin_level(&vfd_en, true);
 	_delay_ms(1);
 	set_pin_level(&vfd_en, false);
-	vfd_write_byte(FIRSR_CHAR_POSITION);
+	vfd_write_byte(FIRST_CHAR_POSITION);
 	vfd_write_byte(0x00);
 	vfd_write_byte(0x00);
 	vfd_write_byte(0x00);
@@ -77,10 +77,9 @@ void vfd_write_byte(uint8_t input_data){
 void vfd_string(uint8_t position, uint8_t *c){
 	uint16_t i = 0;
 	set_pin_level(&vfd_en, false);
-	vfd_write_byte(FIRSR_CHAR_POSITION+position);
+	vfd_write_byte(FIRST_CHAR_POSITION+position);
 	do{
 		vfd_write_byte(c[i++]);
-		//i++;	
 	}while(c[i] != '\0');
 	set_pin_level(&vfd_en, true);
 	nop();
