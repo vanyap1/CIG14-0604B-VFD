@@ -33,7 +33,7 @@ gpio lcd_blk = {(uint8_t *)&PORTE , PORTE2};
 
 
 
-rtc_date sys_rtc = {0, 18, 10, 8, 5, 23, 2};
+rtc_date sys_rtc = {0, 42, 13, 8, 5, 23, 2};
 //second, minute, hour, date, month, year, dayofweek
 
 
