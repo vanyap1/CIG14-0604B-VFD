@@ -3,5 +3,7 @@ CIG14-0604B display controller
 Проект створено в Microchip studio.
 Плата контролера - Eagle.
 
-![alt text](https://github.com/vanyap1/CIG14-0604B-VFD/blob/main/CAD/photo1.jpg)
+![Pin connections](https://github.com/vanyap1/CIG14-0604B-VFD/blob/main/CAD/pin_connection.pngraw=true)
+![photo 1](https://github.com/vanyap1/CIG14-0604B-VFD/blob/main/CAD/photo1.jpg)
+![photo 2](https://github.com/vanyap1/CIG14-0604B-VFD/blob/main/CAD/photo3.png?raw=true)
 
