@@ -37,16 +37,16 @@
 
 
 
-//0Dh, 1Dh – Extension Register
+//0Dh, 1Dh ï¿½ Extension Register
 #define EXT_REG				0x0D
 #define TD					0	//
 #define FD					2	//
 #define TE					4	//
 #define USEL				5	//
 #define WADA				6	//Date is the source for the Alarm Interrupt function.
-#define TEST				7	//This is a manufacturer’s test bit. Its value should always be 0. Avoid writing a 1 to this bit when writing in this register. Zero for normal operation.
+#define TEST				7	//This is a manufacturerï¿½s test bit. Its value should always be 0. Avoid writing a 1 to this bit when writing in this register. Zero for normal operation.
 
-//0Eh, 1Eh – Flag Register
+//0Eh, 1Eh ï¿½ Flag Register
 #define FLAG_REG			0x0E
 #define V1F					0	//
 #define V2F					1	//
@@ -55,7 +55,7 @@
 #define TF					4	//
 #define UF					5	//
 
-//0Fh, 1Fh – Control Register
+//0Fh, 1Fh ï¿½ Control Register
 #define CONTROLL_REG		0x0F
 #define RESET				0	//
 #define EIE					2	//
@@ -63,7 +63,7 @@
 #define TIE					4	//
 #define UIE					5	//
 
-//0Eh, 1Eh – Flag Register
+//0Eh, 1Eh ï¿½ Flag Register
 
 #endif
 

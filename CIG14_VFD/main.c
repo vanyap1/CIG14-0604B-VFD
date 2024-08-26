@@ -61,9 +61,11 @@ int main(void)
 	//rtc_set(&sys_rtc);																//write time to RTC
 	rtc_int_enable(&sys_rtc ,0);														//Serup RTC
 	adc_init();																			//ADC init
-	ISL29034_init(POWER_RUN, RES_16_BIT, LUX_4000);										//Setup light sensor
-	vfd_init(6);
-	vfd_set_brightness(0xff);															//set vfd brightness (0x00 to 0xff)
+	//ISL29034_init(POWER_RUN, RES_16_BIT, LUX_4000);										//Setup light sensor
+	//vfd_init(6);
+	vfd16_init();
+	
+	//vfd_set_brightness(0xff);															//set vfd brightness (0x00 to 0xff)
 	
 	uart_send_string((uint8_t *)"Program Start\n\r");
 	
@@ -77,16 +79,18 @@ int main(void)
 			rtc_int_request = 0;
 			//set_pin_level(&ld1, true);												//Debug led
 			rtc_sync(&sys_rtc);
-			sprintf(char_array, "%02d:%02d", sys_rtc.hour, sys_rtc.minute);
+			sprintf(char_array, "%02d:%02d:%02d+1234567", sys_rtc.hour, sys_rtc.minute, sys_rtc.second);
 			//_delay_ms(1);																//If need sleep before next RTC iteration
 			//sleep_cpu();
 		}
 		
 		//sprintf(char_array, "%05u", read_light_intensity());							//Read light intensity from i2c light sensor
 		//vfd_set_brightness(read_light_intensity());
-		vfd_string(0, (uint8_t *)char_array);											//Write char array to vfd screen
-		uart_send_string((uint8_t *)char_array);
-		uart_send_string((uint8_t *)"\n\r");
+		//vfd_string(0, (uint8_t *)char_array);											//Write char array to vfd screen
+		//uart_send_string((uint8_t *)char_array);
+		//uart_send_string((uint8_t *)"\n\r");
+		
+		vfd16b_string(0, (uint8_t *)char_array);	
 		_delay_ms(100);
 		
     }
